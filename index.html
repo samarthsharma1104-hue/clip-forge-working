@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080808">
+  <meta name="description"
+    content="Clip Forge turns podcasts, interviews, YouTube videos and long-form content into polished short-form clips for Reels, Shorts, TikTok and more.">
+  <meta property="og:title" content="Clip Forge — Turn Long-Form Content Into Short-Form Growth">
+  <meta property="og:description"
+    content="AI-assisted. Human-finished. One long video becomes a short-form content engine.">
+  <title>Clip Forge — Turn Long-Form Content Into Short-Form Growth</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="grid-bg"></div>
+  <div class="ambient">
+    <div class="orb a"></div>
+    <div class="orb b"></div>
+    <div class="orb c"></div>
+  </div>
+  <div id="cursor-glow"></div>
+
+  <nav class="nav" id="nav">
+    <a class="logo" href="#top">CLIP<span>FORGE</span><i>.</i></a>
+    <div class="navlinks">
+      <a href="#calculator">Calculator</a><a href="#studio">AI Studio</a><a href="#difference">Before/After</a><a
+        href="#work">Portfolio</a><a href="#tracker">Track Order</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a>
+    </div>
+    <button class="btn btn-orange" onclick="openFunnel()">Get 3 Free Clips →</button>
+    <button class="mobile-menu-btn" aria-label="Menu" onclick="toggleMenu()">☰</button>
+  </nav>
+
+  <main id="top">
+    <section class="hero container">
+      <div class="reveal">
+        <div class="eyebrow">AI-ASSISTED. HUMAN-FINISHED.</div>
+        <h1>Turn Long-Form<br><em>Content Into</em><br>Short-Form Growth.</h1>
+        <p>We find the moments worth watching and forge them into Shorts, Reels and TikToks that keep your brand in the
+          conversation.</p>
+        <div class="hero-actions"><button class="btn btn-orange" onclick="openFunnel()">Get 3 Free Sample Clips
+            →</button><a class="btn btn-outline" href="#work">View Our Work ↓</a></div>
+        <div class="hero-note"><span class="pulse"></span> FOR CREATORS + BUSINESSES · ONE ENGINE. EVERY PLATFORM.</div>
+      </div>
+      <div class="hero-visual reveal">
+        <div class="hero-shell">
+          <div class="windowbar">
+            <div class="dotrow"><i></i><i></i><i></i></div><span>CONTENT ENGINE / LIVE PREVIEW</span>
+          </div>
+          <div class="engine">
+            <div class="engine-top">
+              <div>
+                <div class="eyebrow">Automated workflow</div>
+                <div style="font-weight:800;font-size:18px;margin-top:6px">1 long video → a short-form system</div>
+              </div><span class="live">● LIVE SYSTEM</span>
+            </div>
+            <div class="pipeline">
+              <div class="pipe">
+                <div class="pipe-left">
+                  <div class="num">01</div>
+                  <div><b>Transcript + Hook Analysis</b><small>Find strong moments fast</small></div>
+                </div><span class="status done">Completed</span>
+              </div>
+              <div class="pipe">
+                <div class="pipe-left">
+                  <div class="num">02</div>
+                  <div><b>Smart 9:16 Speaker Framing</b><small>Multi-speaker active tracking</small></div>
+                </div><span class="status done">Completed</span>
+              </div>
+              <div class="pipe">
+                <div class="pipe-left">
+                  <div class="num">03</div>
+                  <div><b>Kinetic Captions + Sound FX</b><small>Mobile-first attention design</small></div>
+                </div><span class="status work">Processing</span>
+              </div>
+              <div class="pipe">
+                <div class="pipe-left">
+                  <div class="num">04</div>
+                  <div><b>Human Editor Polish + QC</b><small>Final quality control</small></div>
+                </div><span class="status human">Human finish</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="marquee">
+      <div class="track"><span>Instagram Reels</span><span>YouTube Shorts</span><span>TikTok</span><span>Facebook
+          Reels</span><span>LinkedIn</span><span>Podcast Clips</span><span>Instagram Reels</span><span>YouTube
+          Shorts</span><span>TikTok</span><span>Facebook Reels</span><span>LinkedIn</span><span>Podcast Clips</span>
+      </div>
+    </div>
+
+    <section class="section container" id="calculator">
+      <div class="section-head reveal">
+        <div>
+          <div class="eyebrow">Content Potential</div>
+          <h2>How Much Content Is Hiding<br><em>In Your Long-Form Videos?</em></h2>
+          <p>Use the calculator to estimate how many short-form opportunities your recording schedule could create.</p>
+        </div>
+      </div>
+      <div class="calc card reveal">
+        <div class="calc-controls">
+          <div class="field"><label>Monthly Recording Hours <b id="hoursLabel">12 hrs</b></label><input class="range"
+              id="hours" type="range" min="1" max="100" value="12"></div>
+          <div class="field"><label>Average Video Length <b id="lenLabel">60 min</b></label><input class="range"
+              id="length" type="range" min="15" max="180" step="5" value="60"></div>
+          <div class="field"><label>Estimated Avg. Views Per Short</label><select id="views">
+              <option value="500">500</option>
+              <option value="1000">1,000</option>
+              <option value="5000" selected>5,000</option>
+              <option value="10000">10,000</option>
+              <option value="25000">25,000</option>
+              <option value="50000">50,000</option>
+            </select></div><button class="btn btn-outline"
+            onclick="showToast('Calculator assumptions saved for this session.')">Save My Estimate</button>
+        </div>
+        <div class="calc-results">
+          <div>
+            <div class="eyebrow">Estimated Monthly Output</div>
+            <div class="metrics">
+              <div class="metric"><strong id="clipOut">96</strong><small>Potential Short Clips</small></div>
+              <div class="metric"><strong id="weekOut" style="color:var(--orange)">24</strong><small>Clips Per
+                  Week</small></div>
+            </div>
+            <div class="metric"><strong id="viewOut">480,000</strong><small>Illustrative Monthly Impressions</small>
+            </div>
+            <div class="formula">Illustrative estimate based on selected assumptions. Not a guaranteed result.</div>
+          </div><button class="btn btn-orange" onclick="openFunnel()">Turn My Content Into Clips →</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" id="studio">
+      <div class="section-head reveal">
+        <div>
+          <div class="eyebrow">Live Interactive Demo</div>
+          <h2>Test The Clip Forge<br><em>Studio.</em></h2>
+          <p>Pick a sample source and caption style. Watch the preview update instantly.</p>
+        </div>
+      </div>
+      <div class="studio card reveal">
+        <div class="studio-side">
+          <div class="eyebrow">Select a sample recording</div>
+          <div class="preset active" data-preset="0">
+            <div>
+              <h4>AI Futurist Podcast</h4><small>Detected hook: “The 3 Rules of AI Survival”</small>
+            </div><span class="score">98.9%</span>
+          </div>
+          <div class="preset" data-preset="1">
+            <div>
+              <h4>Startup Founder Interview</h4><small>Detected hook: “What nobody tells you at 0→1”</small>
+            </div><span class="score">96.2%</span>
+          </div>
+          <div class="preset" data-preset="2">
+            <div>
+              <h4>Creator Focus Session</h4><small>Detected hook: “Reset your attention in 10 minutes”</small>
+            </div><span class="score">97.5%</span>
+          </div>
+          <div style="margin-top:25px">
+            <div class="eyebrow">Caption preset</div>
+            <div class="chips"><button class="chip active" data-caption="gold">Forge Gold</button><button class="chip"
+                data-caption="neon">Cyber Neon</button><button class="chip" data-caption="clean">Clean Minimal</button>
+            </div>
+          </div>
+        </div>
+        <div class="phone-wrap">
+          <div class="phone media-card"><video id="studioVideo" class="studio-media" playsinline muted loop
+              preload="metadata"
+              poster="https://images.unsplash.com/photo-1589903308904-1010c2294adc?auto=format&fit=crop&w=700&q=85">
+              <source src="https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
+                type="video/mp4">
+            </video>
+            <div class="phone-top"><span class="badge orange" id="studioScore">98.9% SCORE · DEMO</span><span
+                class="badge purple">9:16</span></div><button class="phone-play" id="studioPlay"
+              aria-label="Play sample clip">▶</button>
+            <div class="studio-caption-layer"><small id="studioHook">“The 3 Rules of AI Survival”</small>
+              <div class="phone-caption" id="studioCaption">MOST PEOPLE DON’T REALIZE AI WILL REPLACE <span
+                  class="hi">GENERIC CONTENT</span> FIRST.</div>
+            </div>
+            <div class="phone-bottom"><small>PLAYABLE SAMPLE PREVIEW</small><button class="btn btn-orange"
+                style="padding:8px 10px;font-size:8px" onclick="openFunnel()">Forge Like This</button></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" id="content-lab">
+      <div class="section-head reveal">
+        <div>
+          <div class="eyebrow">From The Other Build</div>
+          <h2>See Your Content<br><em>Get Forged.</em></h2>
+          <p>Choose a creator type and watch the recommended workflow, output and editorial direction change instantly.
+          </p>
+        </div>
+      </div>
+      <div class="content-lab reveal">
+        <div class="content-options card">
+          <div class="eyebrow">Choose Content Type</div><button class="content-option active" data-type="podcast"><span
+              class="ico">🎙️</span><span><b>Podcast</b><small>Episodes → conversation
+                clips</small></span></button><button class="content-option" data-type="founder"><span
+              class="ico">💼</span><span><b>Founder</b><small>Ideas → authority shorts</small></span></button><button
+            class="content-option" data-type="finance"><span class="ico">📈</span><span><b>Finance</b><small>Insights →
+                clear explainers</small></span></button><button class="content-option" data-type="fitness"><span
+              class="ico">💪</span><span><b>Fitness</b><small>Training → action clips</small></span></button><button
+            class="content-option" data-type="education"><span class="ico">🎓</span><span><b>Education</b><small>Lessons
+                → micro-content</small></span></button>
+        </div>
+        <div class="lab-output card">
+          <div class="lab-head">
+            <div>
+              <div class="eyebrow" id="labType">PODCAST WORKFLOW</div>
+              <h3 id="labTitle" style="font-size:30px;margin-top:8px">One episode → a content engine.</h3>
+            </div><span class="status work" id="labStatus">ANALYZING</span>
+          </div>
+          <div class="lab-progress"><i></i></div>
+          <div class="lab-stage"><span>01</span><b id="labStage">Finding the strongest moments</b><span
+              style="margin-left:auto;color:var(--orange)">76%</span></div>
+          <div class="lab-cards">
+            <div class="lab-card"><strong id="labClips">12–16</strong><small>Potential clips</small></div>
+            <div class="lab-card"><strong id="labFormats">3+</strong><small>Platforms</small></div>
+            <div class="lab-card"><strong id="labStyle">Dynamic</strong><small>Edit direction</small></div>
+          </div><button class="btn btn-orange" style="margin-top:18px" onclick="openFunnel()">Forge This Content
+            →</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" id="difference">
+      <div class="section-head reveal">
+        <div>
+          <div class="eyebrow">The Transformation</div>
+          <h2>See The Difference.</h2>
+          <p>Drag the handle, then play the forged preview to see what changes.</p>
+        </div>
+      </div>
+      <div class="split-wrap card reveal forge-intro" id="split">
+        <div class="pane before"><img
+            src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1600&q=85"
+            alt="Raw unedited recording setup" loading="lazy"
+            style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.72"><span
+            class="pane-tag">RAW 16:9 FOOTAGE</span>
+          <div class="pane-content"><strong style="font-size:20px">Raw Uncut Source</strong>
+            <p style="color:#aaa;font-size:12px">Horizontal framing · flat pacing · no captions</p>
+          </div>
+        </div>
+        <div class="pane after" id="afterPane"><video id="transformVideo" class="studio-media" playsinline muted loop
+            preload="metadata"
+            poster="https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=1600&q=85">
+            <source src="https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscape.mp4" type="video/mp4">
+          </video><span class="pane-tag">CLIP FORGE 9:16 EDIT</span><button class="phone-play" id="transformPlay"
+            aria-label="Play forged preview">▶</button>
+          <div class="pane-content"><strong style="font-size:20px;color:var(--orange)">Forged For The Feed</strong>
+            <p style="color:#aaa;font-size:12px">Dynamic framing · captions · hook · sound design</p>
+          </div>
+        </div>
+        <div class="split-handle" id="splitHandle" style="left:50%">
+          <div class="split-knob"><span>↔</span></div>
+        </div>
+        <div class="split-hint">Drag to forge · click ▶ to preview</div><input class="split-range" id="splitRange"
+          type="range" min="0" max="100" value="50" aria-label="Before and after comparison">
+      </div>
+    </section>
+
+    <section class="section container">
+      <div class="section-head reveal">
+        <div>
+          <div class="eyebrow">More Than Editing</div>
+          <h2>AI Finds The Moments.<br><em>Humans Make Them Great.</em></h2>
+          <p>Automation gives the workflow speed. Human judgment gives the final cut its taste, context and consistency.
+          </p>
+        </div>
+      </div>
+      <div class="compare reveal">
+        <div class="compare-card card">
+          <h3>Traditional Editing</h3>
+          <ul>
+            <li><b>✖</b>Manual content search</li>
+            <li><b>✖</b>Generic, templated edits</li>
+            <li><b>✖</b>One format output</li>
+            <li><b>✖</b>Editing without content strategy</li>
+          </ul>
+        </div>
+        <div class="compare-card highlight card">
+          <h3 style="color:var(--orange)">Clip Forge Engine</h3>
+          <ul>
+            <li><b>✔</b>AI-assisted moment discovery</li>
+            <li><b>✔</b>Human creative review + polish</li>
+            <li><b>✔</b>Multi-platform formatting</li>
+            <li><b>✔</b>Hook optimization + content strategy</li>
+            <li><b>✔</b>Optional scheduling + analytics</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" id="work">
+      <div class="section-head reveal">
+        <div>
+          <div class="eyebrow">Selected Work / Samples</div>
+          <h2>Work That Speaks<br><em>For Itself.</em></h2>
+          <p>Demo projects below are illustrative until real client work is added.</p>
+        </div>
+      </div>
+      <div class="filter-tabs reveal"><button class="filter-btn active" data-filter="all">All</button><button
+          class="filter-btn" data-filter="podcasts">Podcasts</button><button class="filter-btn"
+          data-filter="business">Business</button><button class="filter-btn"
+          data-filter="fitness">Fitness</button><button class="filter-btn" data-filter="finance">Finance</button><button
+          class="filter-btn" data-filter="education">Education</button></div>
+      <div class="portfolio reveal" id="portfolio">
+        <article class="project card" data-cat="podcasts" data-title="The Founder’s Unfiltered Playbook"
+          data-desc="Podcast repurposing demo with hook selection, speaker tracking and animated captions."
+          data-tech="Hook optimization, dynamic captions, speaker tracking" data-style="Podcast"
+          data-video="https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4">
+          <div class="thumb t1"><img class="portfolio-thumb-media"
+              src="https://images.unsplash.com/photo-1589903308904-1010c2294adc?auto=format&fit=crop&w=900&q=85"
+              alt="Podcast studio sample" loading="lazy">
+            <div class="play">▶</div>
+          </div>
+          <div class="project-meta">
+            <div class="top"><span>Podcasts</span><span>Sample</span></div>
+            <h3>The Founder’s Unfiltered Playbook</h3>
+            <p>60-minute source → short-form content system</p>
+          </div>
+        </article>
+        <article class="project card" data-cat="business" data-title="Building In Public Without Noise"
+          data-desc="Executive interview demo built for LinkedIn and YouTube Shorts."
+          data-tech="Clean cuts, branded graphics, multi-platform framing" data-style="Business"
+          data-video="https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4"
+          data-video="https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4">
+          <div class="thumb t2"><img class="portfolio-thumb-media"
+              src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=900&q=85"
+              alt="Business interview sample" loading="lazy">
+            <div class="play">▶</div>
+          </div>
+          <div class="project-meta">
+            <div class="top"><span>Business</span><span>Sample</span></div>
+            <h3>Building In Public Without Noise</h3>
+            <p>Interview → clean, punchy vertical shorts</p>
+          </div>
+        </article>
+        <article class="project card" data-cat="finance" data-title="The Simple Money Framework"
+          data-desc="Finance explainer demo using visual callouts and motion-led storytelling."
+          data-tech="Motion graphics, visual callouts, kinetic text" data-style="Finance"
+          data-video="https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4">
+          <div class="thumb t3"><img class="portfolio-thumb-media"
+              src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=85"
+              alt="Finance content sample" loading="lazy">
+            <div class="play">▶</div>
+          </div>
+          <div class="project-meta">
+            <div class="top"><span>Finance</span><span>Sample</span></div>
+            <h3>The Simple Money Framework</h3>
+            <p>Complex topic → easy-to-consume visual clip</p>
+          </div>
+        </article>
+        <article class="project card" data-cat="education" data-title="Make Complex Ideas Click"
+          data-desc="Lecture-style content demo focused on extracting clear ‘aha moments’."
+          data-tech="Aha-moment selection, B-roll overlays, captions" data-style="Education"
+          data-video="https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4">
+          <div class="thumb t4"><img class="portfolio-thumb-media"
+              src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=900&q=85"
+              alt="Education content sample" loading="lazy">
+            <div class="play">▶</div>
+          </div>
+          <div class="project-meta">
+            <div class="top"><span>Education</span><span>Sample</span></div>
+            <h3>Make Complex Ideas Click</h3>
+            <p>Long lesson → digestible vertical micro-content</p>
+          </div>
+        </article>
+        <article class="project card" data-cat="fitness" data-title="Train Smarter, Not Louder"
+          data-desc="Fitness content demo paced around action, rhythm and coaching cues."
+          data-tech="Beat cuts, action framing, audio ducking" data-style="Fitness"
+          data-video="https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4">
+          <div class="thumb t5"><img class="portfolio-thumb-media"
+              src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=900&q=85"
+              alt="Fitness content sample" loading="lazy">
+            <div class="play">▶</div>
+          </div>
+          <div class="project-meta">
+            <div class="top"><span>Fitness</span><span>Sample</span></div>
+            <h3>Train Smarter, Not Louder</h3>
+            <p>Workout footage → energetic social short</p>
+          </div>
+        </article>
+        <article class="project card" data-cat="business" data-title="Scaling A SaaS Content Engine"
+          data-desc="Founder strategy demo with actionable B2B snippets and branded UI overlays."
+          data-tech="Hook cards, progress bars, branded motion" data-style="Business">
+          <div class="thumb t6"><img class="portfolio-thumb-media"
+              src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=900&q=85"
+              alt="SaaS business content sample" loading="lazy">
+            <div class="play">▶</div>
+          </div>
+          <div class="project-meta">
+            <div class="top"><span>Business</span><span>Sample</span></div>
+            <h3>Scaling A SaaS Content Engine</h3>
+            <p>Founder conversation → actionable growth snippets</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section container">
+      <div class="section-head reveal">
+        <div>
+          <div class="eyebrow">AI-Powered Clip Intelligence</div>
+          <h2>Illustrative AI<br><em>Clip Score.</em></h2>
+          <p>Demo-only scoring UI showing how a future Clip Forge analysis layer could communicate content quality
+            signals.</p>
+        </div>
+      </div>
+      <div class="ai-score card reveal">
+        <div class="score-visual">
+          <div class="ring">
+            <div class="ring-content"><strong>88</strong><small>DEMO SCORE</small></div>
+          </div>
+        </div>
+        <div class="score-bars">
+          <div class="bar-row">
+            <div class="bar-label"><span>Hook Strength</span><span>92 / 100</span></div>
+            <div class="bar"><i style="width:92%"></i></div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-label"><span>Retention Potential</span><span>87 / 100</span></div>
+            <div class="bar"><i style="width:87%"></i></div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-label"><span>Clarity</span><span>95 / 100</span></div>
+            <div class="bar"><i style="width:95%"></i></div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-label"><span>Shareability</span><span>84 / 100</span></div>
+            <div class="bar"><i style="width:84%"></i></div>
+          </div>
+          <div class="formula">Illustrative demo values — not guaranteed predictions.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" id="tracker">
+      <div class="section-head reveal">
+        <div>
+          <div class="eyebrow">Real-Time Pipeline</div>
+          <h2>Track Your Order.</h2>
+          <p>Enter a demo or client Order ID to see progress, delivery stage and next actions.</p>
+        </div>
+      </div>
+      <div class="card reveal" style="padding:24px">
+        <div style="display:flex;gap:10px;flex-wrap:wrap"><input id="orderId" type="text" value="CF-8942"
+            placeholder="CF-8942"><button class="btn btn-orange" onclick="trackOrder()">Track Status →</button></div>
+        <div id="trackerResult" style="margin-top:16px"></div>
+      </div>
+    </section>
+
+    <section class="section container" id="pricing">
+      <div class="section-head reveal">
+        <div>
+          <div class="eyebrow">Packages</div>
+          <h2>Simple Plans.<br><em>Consistent Content.</em></h2>
+          <p>Choose your currency and billing frequency. Save 15% on quarterly plans.</p>
+        </div>
+      </div>
+      <div class="billing reveal">
+        <div class="seg" id="billing"><button class="active" data-bill="monthly">Monthly</button><button
+            data-bill="quarterly">Quarterly (Save 15%)</button></div>
+        <div class="seg" id="currency"><button class="active" data-curr="USD">USD ($)</button><button
+            data-curr="INR">INR (₹)</button></div>
+      </div>
+      <div class="pricing reveal">
+        <div class="price-card card">
+          <div>
+            <div class="plan">Starter Plan</div>
+            <h3>12 Clips / mo</h3>
+            <div class="price" id="pStarter">$149 <small>/ mo</small></div>
+            <div class="sub" id="sStarter">Billed monthly</div>
+            <ul>
+              <li>12 short-form vertical edits</li>
+              <li>Dynamic animated captions</li>
+              <li>9:16 re-framing & zoom cuts</li>
+              <li>48-hour turnarounds</li>
+            </ul>
+          </div><button class="btn btn-outline" onclick="openFunnel()">Get Started →</button>
+        </div>
+        <div class="price-card card popular"><span class="popular-badge">MOST POPULAR</span>
+          <div>
+            <div class="plan">Growth Plan (Popular)</div>
+            <h3>30 Clips / mo</h3>
+            <div class="price" id="pGrowth">$299 <small>/ mo</small></div>
+            <div class="sub" id="sGrowth">Billed monthly</div>
+            <ul>
+              <li>Everything in Starter</li>
+              <li>AI hook detection & polish</li>
+              <li>Custom brand motion graphics</li>
+              <li>Multi-platform formatting</li>
+              <li>Priority revision queue</li>
+            </ul>
+          </div><button class="btn btn-orange" onclick="openFunnel()">Start Growing →</button>
+        </div>
+        <div class="price-card card">
+          <div>
+            <div class="plan">Pro Scale</div>
+            <h3>60 Clips / mo</h3>
+            <div class="price" id="pPro">$499 <small>/ mo</small></div>
+            <div class="sub" id="sPro">Billed monthly</div>
+            <ul>
+              <li>Everything in Growth</li>
+              <li>Full content calendar strategy</li>
+              <li>Dedicated senior editor</li>
+              <li>24-hour turnaround window</li>
+              <li>Direct Slack channel</li>
+            </ul>
+          </div><button class="btn btn-outline" onclick="openFunnel()">Talk To Us →</button>
+        </div>
+      </div>
+      <div class="price-note">Pricing is editable. Quarterly pricing applies a 15% discount to the monthly rate and
+        bills every 3 months.</div>
+    </section>
+
+    <section class="section container" id="process">
+      <div class="section-head reveal">
+        <div>
+          <div class="eyebrow">From Upload To Published</div>
+          <h2>One Workflow.<br><em>Zero Guesswork.</em></h2>
+        </div>
+      </div>
+      <div class="timeline reveal">
+        <div class="step">
+          <div class="step-num">01</div>
+          <h4>Send</h4>
+          <p>Share your long-form source.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">02</div>
+          <h4>Analyze</h4>
+          <p>AI-assisted moment discovery.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">03</div>
+          <h4>Select</h4>
+          <p>Choose the strongest stories.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">04</div>
+          <h4>Edit</h4>
+          <p>Captions, B-roll and motion.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">05</div>
+          <h4>QC</h4>
+          <p>Human quality control.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">06</div>
+          <h4>Publish</h4>
+          <p>Deliver or schedule.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container">
+      <div class="section-head reveal">
+        <div>
+          <div class="eyebrow">Built For People Who Already Have Great Content</div>
+          <h2>Choose Your <em>Content Type.</em></h2>
+        </div>
+      </div>
+      <div class="types reveal">
+        <div class="type">
+          <div class="ico">🎙️</div><b>Podcasters</b><small>Episodes → shorts</small>
+        </div>
+        <div class="type">
+          <div class="ico">💼</div><b>Founders</b><small>Ideas → authority</small>
+        </div>
+        <div class="type">
+          <div class="ico">📈</div><b>Finance</b><small>Insights → clarity</small>
+        </div>
+        <div class="type">
+          <div class="ico">💪</div><b>Fitness</b><small>Training → action</small>
+        </div>
+        <div class="type">
+          <div class="ico">🎓</div><b>Educators</b><small>Lessons → micro-content</small>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" id="dashboard">
+      <div class="section-head reveal">
+        <div>
+          <div class="eyebrow">Client Experience Preview</div>
+          <h2>Your Content.<br><em>One Dashboard.</em></h2>
+          <p>Preview the experience a future Clip Forge client portal can provide.</p>
+        </div>
+      </div>
+      <div class="dashboard card reveal">
+        <div class="dash-head">
+          <div><b>PROJECT: PODCAST EPISODE 27</b>
+            <div style="font-size:10px;color:#777;margin-top:3px">12 clips in current batch</div>
+          </div><span class="status work">IN REVIEW</span>
+        </div>
+        <div class="dash-body">
+          <div class="dash-tools"><button class="btn btn-quiet dash-action dash-filter-active" data-filter="all">All
+              Clips</button><button class="btn btn-quiet dash-action" data-filter="review">Pending
+              Review</button><button class="btn btn-quiet dash-action" data-filter="approved">Approved</button><button
+              class="btn btn-quiet dash-action" onclick="showToast('Content calendar opened ✓')">Schedule</button></div>
+          <div class="dash-grid" style="margin-top:14px">
+            <div class="mini-card">
+              <h4>Clip Queue</h4>
+              <div class="status-row dash-row" data-status="approved"><span>Clip 01 · Founder Hook</span><span
+                  class="status-pill">Approved</span></div>
+              <div class="status-row dash-row" data-status="review"><span>Clip 02 · Growth Story</span><span
+                  class="status-pill" style="color:var(--orange);background:rgba(255,106,0,.08)">Review</span></div>
+              <div class="status-row dash-row" data-status="revision"><span>Clip 03 · Product Lesson</span><span
+                  class="status-pill" style="color:#aaa;background:#19191b">Revision</span></div>
+              <div class="status-row dash-row" data-status="approved"><span>Clip 04 · Hiring Mistake</span><span
+                  class="status-pill">Approved</span></div>
+              <div class="tracker-actions"><button class="btn btn-outline"
+                  onclick="showToast('Clip preview opened ✓')">Preview</button><button class="btn btn-orange"
+                  onclick="showToast('Revision request prepared ✓')">Request Revision</button></div>
+            </div>
+            <div class="mini-card">
+              <h4>Publishing Calendar</h4>
+              <div class="schedule">
+                <div class="day"><span>MON</span><small>Founder Clip</small></div>
+                <div class="day"><span>WED</span><small>Podcast Reel</small></div>
+                <div class="day"><span>FRI</span><small>LinkedIn Short</small></div>
+                <div class="day"><span>SUN</span><small>Best Of</small></div>
+              </div>
+              <div style="margin-top:16px;padding-top:14px;border-top:1px solid var(--line);font-size:10px;color:#777">
+                NEXT PUBLISHING SLOT <b style="color:#fff">Wednesday · 7:30 PM</b></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" id="faq">
+      <div class="section-head reveal">
+        <div>
+          <div class="eyebrow">Answers & Clarity</div>
+          <h2>Frequently Asked<br><em>Questions.</em></h2>
+        </div>
+      </div>
+      <div class="faq reveal"><input class="faq-search" id="faqSearch" type="text" placeholder="Search questions…">
+        <div id="faqList">
+          <div class="faq-item open"><button class="faq-btn"><span>How does the AI + human workflow work?</span><span
+                class="faq-plus">−</span></button>
+            <div class="faq-answer">AI can accelerate transcript search, moment discovery, captioning and reframing.
+              Human review handles storytelling, polish, consistency and final QC.</div>
+          </div>
+          <div class="faq-item"><button class="faq-btn"><span>How many clips can you create from one long-form
+                video?</span><span class="faq-plus">+</span></button>
+            <div class="faq-answer">The answer depends on source length and content density. The calculator on this page
+              provides an illustrative planning estimate.</div>
+          </div>
+          <div class="faq-item"><button class="faq-btn"><span>Can you match my brand style?</span><span
+                class="faq-plus">+</span></button>
+            <div class="faq-answer">Yes. A client workflow can capture brand colors, fonts, logo treatments, caption
+              presets and motion references during onboarding.</div>
+          </div>
+          <div class="faq-item"><button class="faq-btn"><span>Which platforms do you support?</span><span
+                class="faq-plus">+</span></button>
+            <div class="faq-answer">The workflow is designed for Instagram Reels, YouTube Shorts, TikTok, Facebook Reels
+              and LinkedIn.</div>
+          </div>
+          <div class="faq-item"><button class="faq-btn"><span>Can you schedule and publish content?</span><span
+                class="faq-plus">+</span></button>
+            <div class="faq-answer">Publishing and scheduling can be offered as an optional workflow depending on the
+              final client setup.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta container">
+      <div class="eyebrow" style="justify-content:center">Ready When You Are</div>
+      <h2>You Already Have The Content.<br><em>Let Us Forge The Clips.</em></h2>
+      <p>Stop letting your best ideas disappear after one upload. Turn long-form recordings into a repeatable short-form
+        content engine.</p>
+      <div class="hero-actions" style="justify-content:center"><button class="btn btn-orange" onclick="openFunnel()">Get
+          3 Free Sample Clips →</button><a class="btn btn-outline" href="#pricing">See Pricing</a></div>
+    </section>
+  </main>
+
+  <footer class="footer container">
+    <div>© 2026 Clip Forge. All rights reserved.</div>
+    <div class="footer-links"><a href="#top">Home</a><a href="#work">Work</a><a href="#pricing">Pricing</a><a
+        href="#faq">FAQ</a><a href="#contact" onclick="openFunnel();return false">Contact</a></div>
+    <div>AI-ASSISTED. HUMAN-FINISHED.</div>
+  </footer>
+
+  <!-- Portfolio Modal -->
+  <div class="modal" id="videoModal"><button class="modal-close" onclick="closeVideoModal()">✕</button>
+    <div class="modal-box">
+      <div class="video-grid">
+        <div class="video-modal-media"><span class="badge orange media-note">SAMPLE PROJECT · PLAYABLE</span><span
+            class="media-poster-label">9:16 PREVIEW</span><video id="portfolioModalVideo" class="modal-video" controls
+            playsinline preload="metadata">
+            <source src="https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" type="video/mp4">
+          </video></div>
+        <div class="modal-info">
+          <div class="eyebrow" id="modalStyle">PODCAST</div>
+          <h3 id="modalTitle">Project title</h3>
+          <p id="modalDesc">Project description.</p>
+          <div class="techs" id="modalTech"></div><button class="btn btn-outline" style="width:100%;margin-bottom:10px"
+            onclick="togglePortfolioVideo()">Play / Pause Preview</button><button class="btn btn-orange"
+            style="width:100%" onclick="closeVideoModal();openFunnel()">Forge My Clips Like This →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sample Funnel -->
+  <div class="modal" id="funnelModal"><button class="modal-close" onclick="closeFunnel()">✕</button>
+    <div class="modal-box funnel-box">
+      <div class="progress">
+        <div class="prog active" id="pr1">01 CONTENT</div>
+        <div class="prog" id="pr2">02 STYLE</div>
+        <div class="prog" id="pr3">03 GOALS</div>
+        <div class="prog" id="pr4">04 CONTACT</div>
+      </div>
+      <div class="step-page active" id="fs1">
+        <h3>What Do You Want Us To Forge?</h3>
+        <p>Paste a YouTube, podcast or long-form URL.</p><input id="fUrl" type="url"
+          placeholder="https://youtube.com/watch?v=...">
+        <div style="height:10px"></div><select id="fType">
+          <option>Podcast</option>
+          <option>YouTube Long-Form</option>
+          <option>Interview</option>
+          <option>Webinar / Course</option>
+          <option>Business Video</option>
+        </select>
+        <div class="funnel-actions" style="margin-top:15px"><button class="btn btn-orange" style="width:100%"
+            onclick="nextFunnel(2)">Next: Choose Style →</button></div>
+      </div>
+      <div class="step-page" id="fs2">
+        <h3>Choose Your Editing Style.</h3>
+        <p>Select the visual direction you prefer.</p>
+        <div class="style-grid"><button class="style-choice active" data-style="Viral High-Pacing"><b>⚡ Viral
+              High-Pacing</b><small>Bold captions, zooms, sound FX</small></button><button class="style-choice"
+            data-style="Clean Corporate"><b>💼 Clean Corporate</b><small>Minimal cuts, brand-first
+              styling</small></button><button class="style-choice" data-style="Podcast Focus"><b>🎙️ Podcast
+              Focus</b><small>Speaker tracking + storytelling</small></button><button class="style-choice"
+            data-style="Cinematic Polish"><b>🎬 Cinematic Polish</b><small>B-roll + premium visual
+              polish</small></button></div>
+        <div class="funnel-actions"><button class="btn btn-outline" onclick="nextFunnel(1)">Back</button><button
+            class="btn btn-orange" style="flex:1" onclick="nextFunnel(3)">Next: Growth Goals →</button></div>
+      </div>
+      <div class="step-page" id="fs3">
+        <h3>What Are You Trying To Achieve?</h3>
+        <p>Choose the main platform and content volume.</p><select id="fGoal">
+          <option>Grow Instagram Reels</option>
+          <option>Grow YouTube Shorts</option>
+          <option>Grow TikTok</option>
+          <option>Build LinkedIn Personal Brand</option>
+          <option>Repurpose Existing Content</option>
+        </select>
+        <div style="height:10px"></div><select id="fVol">
+          <option>10–15 clips / mo</option>
+          <option>20–30 clips / mo</option>
+          <option>40+ clips / mo</option>
+          <option>60+ clips / mo</option>
+        </select>
+        <div class="funnel-actions" style="margin-top:15px"><button class="btn btn-outline"
+            onclick="nextFunnel(2)">Back</button><button class="btn btn-orange" style="flex:1"
+            onclick="nextFunnel(4)">Next: Contact Details →</button></div>
+      </div>
+      <div class="step-page" id="fs4">
+        <h3>Where Should We Send Your Clips?</h3>
+        <p>Your details are used only to handle the request.</p><input id="fName" type="text" placeholder="Your Name">
+        <div style="height:10px"></div><input id="fEmail" type="email" placeholder="Email Address">
+        <div style="height:10px"></div><input id="fPhone" type="text" placeholder="WhatsApp / Phone Number">
+        <div class="funnel-actions" style="margin-top:15px"><button class="btn btn-outline"
+            onclick="nextFunnel(3)">Back</button><button class="btn btn-orange" style="flex:1"
+            onclick="submitFunnel()">Request My 3 Free Clips →</button></div>
+      </div>
+      <div class="step-page" id="fSuccess">
+        <div class="success">
+          <div class="big">✓</div>
+          <h3 style="font-size:30px">Request Received.</h3>
+          <p id="successText">Your sample request has been captured.</p><button class="btn btn-orange"
+            onclick="closeFunnel()">Back To Clip Forge</button>
+        </div>
+      </div>
+      <div class="summary" id="fSummary" style="display:none"></div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script>
+    const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
+    const state = { billing: 'monthly', currency: 'USD', funnelStyle: 'Viral High-Pacing' };
+
+    function showToast(msg) { const t = $('#toast'); t.textContent = msg; t.classList.add('show'); clearTimeout(window.__toast); window.__toast = setTimeout(() => t.classList.remove('show'), 2400) }
+    function toggleMenu() { $('#nav').classList.toggle('open') }
+
+    document.addEventListener('mousemove', e => { const g = $('#cursor-glow'); g.style.left = e.clientX + 'px'; g.style.top = e.clientY + 'px' });
+
+    const revealObs = new IntersectionObserver(entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('show') }), { threshold: .08 });
+    $$('.reveal').forEach(el => revealObs.observe(el));
+
+    // Calculator
+    function updateCalc() { const h = +$('#hours').value, l = +$('#length').value, v = +$('#views').value; const clips = Math.max(1, Math.round((h * 60 / l) * 8)); const weeks = Math.max(1, Math.ceil(clips / 4)); const monthly = clips * v; $('#hoursLabel').textContent = h + ' hrs'; $('#lenLabel').textContent = l + ' min'; $('#clipOut').textContent = clips.toLocaleString(); $('#weekOut').textContent = weeks.toLocaleString(); $('#viewOut').textContent = monthly.toLocaleString('en-IN') }
+    ['#hours', '#length', '#views'].forEach(id => $(id).addEventListener('input', updateCalc)); updateCalc();
+
+    // Studio
+    const presets = [['98.9% SCORE · DEMO', '“The 3 Rules of AI Survival”', 'MOST PEOPLE DON’T REALIZE AI WILL REPLACE <span class="hi">GENERIC CONTENT</span> FIRST.', 'https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4'], ['96.2% SCORE · DEMO', '“What nobody tells you at 0→1”', 'THE HARDEST PART OF STARTING ISN’T <span class="hi">BUILDING.</span> IT’S FINDING THE RIGHT SIGNAL.', 'https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4'], ['97.5% SCORE · DEMO', '“Reset your attention in 10 minutes”', 'YOUR FOCUS ISN’T BROKEN. YOUR ENVIRONMENT IS <span class="hi">TRAINING IT.</span>', 'https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4']];
+    $$('.preset').forEach((p, i) => p.addEventListener('click', () => { $$('.preset').forEach(x => x.classList.remove('active')); p.classList.add('active'); $('#studioScore').textContent = presets[i][0]; $('#studioHook').textContent = presets[i][1]; $('#studioCaption').innerHTML = presets[i][2]; const v = $('#studioVideo'); v.src = presets[i][3]; v.load(); v.play().catch(() => { }); $('#studioPlay').textContent = '❚❚'; track('studio_preset_selected', { index: i }) }));
+    const studioVideo = $('#studioVideo'), studioPlay = $('#studioPlay'); studioPlay.addEventListener('click', () => { if (studioVideo.paused) { studioVideo.play(); studioPlay.textContent = '❚❚' } else { studioVideo.pause(); studioPlay.textContent = '▶' } }); studioVideo.addEventListener('play', () => studioPlay.textContent = '❚❚'); studioVideo.addEventListener('pause', () => studioPlay.textContent = '▶');
+    $$('.chip').forEach(c => c.addEventListener('click', () => { $$('.chip').forEach(x => x.classList.remove('active')); c.classList.add('active'); const type = c.dataset.caption; const caption = $('#studioCaption'); caption.style.textShadow = type === 'clean' ? 'none' : type === 'neon' ? '0 0 16px rgba(167,139,250,.5)' : '0 3px 10px #000'; if (type === 'neon') caption.querySelectorAll('.hi').forEach(x => x.style.color = 'var(--purple)'); else caption.querySelectorAll('.hi').forEach(x => x.style.color = 'var(--orange)') }));
+
+    // Split slider
+    function updateSplit(v) { const value = Math.max(0, Math.min(100, Number(v))); $('#splitHandle').style.left = value + '%'; $('#afterPane').style.clipPath = `inset(0 0 0 ${value}%)`; $('#splitRange').setAttribute('aria-valuenow', String(value)) }
+    $('#splitRange').addEventListener('input', e => updateSplit(e.target.value)); updateSplit(50); setTimeout(() => $('#split').classList.remove('forge-intro'), 2800);
+    const transformVideo = $('#transformVideo'), transformPlay = $('#transformPlay'); transformPlay.addEventListener('click', () => { if (transformVideo.paused) { transformVideo.play(); transformPlay.textContent = '❚❚' } else { transformVideo.pause(); transformPlay.textContent = '▶' } }); transformVideo.addEventListener('play', () => transformPlay.textContent = '❚❚'); transformVideo.addEventListener('pause', () => transformPlay.textContent = '▶');
+
+    // Portfolio
+    $$('.filter-btn').forEach(btn => btn.addEventListener('click', () => { const f = btn.dataset.filter; $$('.filter-btn').forEach(b => b.classList.toggle('active', b === btn)); $$('.project').forEach(p => p.classList.toggle('hidden', f !== 'all' && p.dataset.cat !== f)) }));
+    $$('.project').forEach(p => p.addEventListener('click', () => openVideo(p)));
+    function openVideo(p) { $('#modalTitle').textContent = p.dataset.title; $('#modalDesc').textContent = p.dataset.desc; $('#modalStyle').textContent = p.dataset.style.toUpperCase() + ' · SAMPLE PROJECT'; $('#modalTech').innerHTML = p.dataset.tech.split(',').map(x => `<span>${x.trim()}</span>`).join(''); const mv = $('#portfolioModalVideo'); mv.src = p.dataset.video || 'https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4'; mv.load(); $('#videoModal').classList.add('open'); document.body.style.overflow = 'hidden'; track('portfolio_video_opened', { title: p.dataset.title }) }
+    function togglePortfolioVideo() { const mv = $('#portfolioModalVideo'); if (mv.paused) { mv.play(); } else { mv.pause() } }
+    function closeVideoModal() { const mv = $('#portfolioModalVideo'); mv.pause(); $('#videoModal').classList.remove('open'); if (!$('#funnelModal').classList.contains('open')) document.body.style.overflow = '' }
+
+    // Pricing
+    const prices = { USD: { starter: 149, growth: 299, pro: 499, sym: '$', locale: 'en-US' }, INR: { starter: 12500, growth: 25000, pro: 42000, sym: '₹', locale: 'en-IN' } };
+    function updatePricing() { const d = prices[state.currency], m = state.billing === 'quarterly';['starter', 'growth', 'pro'].forEach(plan => { const val = m ? d[plan] * .85 : d[plan]; $('#p' + plan[0].toUpperCase() + plan.slice(1)).innerHTML = `${d.sym}${new Intl.NumberFormat(d.locale, { maximumFractionDigits: 2 }).format(val)} <small>/ mo</small>`; $('#s' + plan[0].toUpperCase() + plan.slice(1)).textContent = m ? `Billed quarterly · Save 15% · ${d.sym}${new Intl.NumberFormat(d.locale, { maximumFractionDigits: 2 }).format(val * 3)} total` : 'Billed monthly' }) }
+    $$('#billing button').forEach(b => b.addEventListener('click', () => { state.billing = b.dataset.bill; $$('#billing button').forEach(x => x.classList.toggle('active', x === b)); updatePricing() }));
+    $$('#currency button').forEach(b => b.addEventListener('click', () => { state.currency = b.dataset.curr; $$('#currency button').forEach(x => x.classList.toggle('active', x === b)); updatePricing() })); updatePricing();
+
+    // Order tracker
+    // Content Lab selector
+    const labData = { podcast: { type: 'PODCAST WORKFLOW', title: 'One episode → a content engine.', stage: 'Finding the strongest moments', clips: '12–16', formats: '3+', style: 'Dynamic' }, founder: { type: 'FOUNDER WORKFLOW', title: 'Ideas → authority content.', stage: 'Isolating sharp founder insights', clips: '10–14', formats: '3+', style: 'Clean + branded' }, finance: { type: 'FINANCE WORKFLOW', title: 'Complex ideas → clear clips.', stage: 'Selecting high-clarity explanations', clips: '8–12', formats: '4+', style: 'Visual' }, fitness: { type: 'FITNESS WORKFLOW', title: 'Training → action content.', stage: 'Finding teachable moments', clips: '10–18', formats: '3+', style: 'Fast-paced' }, education: { type: 'EDUCATION WORKFLOW', title: 'Lessons → micro-content.', stage: 'Extracting “aha” moments', clips: '8–16', formats: '3+', style: 'Explainer' } };
+    $$('.content-option').forEach(btn => btn.addEventListener('click', () => { const d = labData[btn.dataset.type]; $$('.content-option').forEach(x => x.classList.remove('active')); btn.classList.add('active'); $('#labType').textContent = d.type; $('#labTitle').textContent = d.title; $('#labStage').textContent = d.stage; $('#labClips').textContent = d.clips; $('#labFormats').textContent = d.formats; $('#labStyle').textContent = d.style; showToast(d.type + ' selected ✓') }));
+    // Dashboard filters
+    $$('.dash-action[data-filter]').forEach(btn => btn.addEventListener('click', () => { const f = btn.dataset.filter; $$('.dash-action[data-filter]').forEach(x => x.classList.remove('dash-filter-active')); btn.classList.add('dash-filter-active'); $$('.dash-row').forEach(row => row.classList.toggle('hidden', f !== 'all' && row.dataset.status !== f)); showToast((f === 'all' ? 'All clips' : f === 'review' ? 'Pending review' : 'Approved') + ' view ✓') }));
+    // Interactive process timeline
+    $$('.timeline .step').forEach(step => step.addEventListener('click', () => { $$('.timeline .step').forEach(x => x.classList.remove('active')); step.classList.add('active'); showToast('Workflow step selected: ' + step.querySelector('h4').textContent) }));
+    const orders = {
+      'CF-8942': { title: 'Podcast Episode 27', status: 'In Review', steps: ['Source received', 'Hook analysis', 'Vertical framing', 'Captions + sound design', 'Human QC'], current: 4 },
+      'CF-7710': { title: 'Founder Interview Batch', status: 'Approved', steps: ['Source received', 'Hook analysis', 'Vertical framing', 'Captions + sound design', 'Delivered'], current: 5 },
+      'CF-5521': { title: 'Fitness Reels Batch', status: 'Processing', steps: ['Source received', 'Hook analysis', 'Vertical framing', 'Captions + sound design', 'Human QC'], current: 3 }
+    };
+    async function trackOrder() { const id = $('#orderId').value.trim().toUpperCase(); if (!id) { showToast('Enter an Order ID first.'); return } const renderOrder = o => { const pct = o.progress ?? Math.round((o.current / o.steps.length) * 100); $('#trackerResult').innerHTML = `<div class="tracker-summary"><div class="mini-card"><div style="display:flex;justify-content:space-between;gap:15px;align-items:center"><div><h4>${o.title}</h4><p style="color:#777;font-size:11px">Order ID: ${id}</p></div><span class="status work">${o.status}</span></div><div style="display:flex;justify-content:space-between;font:10px 'Courier New',monospace;color:#777;margin:16px 0 7px"><span>PROJECT PROGRESS</span><b style="color:var(--orange)">${pct}%</b></div><div class="tracker-progress"><i style="width:${pct}%"></i></div><div class="tracker-actions"><button class="btn btn-outline" onclick="showToast('Clip preview opened ✓')">View Clips</button><button class="btn btn-outline" onclick="showToast('Revision request prepared ✓')">Request Revision</button><button class="btn btn-orange" onclick="navigator.clipboard?.writeText('${id}');showToast('Order ID copied ✓')">Copy Order ID</button></div></div><div class="mini-card"><div class="eyebrow">Pipeline</div><div style="display:grid;gap:8px;margin-top:12px">${o.steps.map((st, i) => `<div class="status-row"><span>${i + 1}. ${st}</span><span class="status-pill" style="${i + 1 <= o.current ? '' : 'background:#151516;color:#666'}">${i + 1 <= o.current ? 'Complete' : 'Queued'}</span></div>`).join('')}</div><p style="color:#777;font-size:10px;margin-top:12px">${o.offline ? 'Demo data is shown locally.' : 'Live data is served by the Clip Forge backend.'}</p></div></div>` }; try { const r = await fetch(`/api/orders/${encodeURIComponent(id)}`); if (!r.ok) throw new Error('Order not found'); renderOrder(await r.json()); track('order_tracked', { orderId: id }); return } catch (e) { const local = orders[id]; if (local) { renderOrder({ ...local, progress: Math.round((local.current / local.steps.length) * 100), offline: true }); showToast('Showing local demo order ✓'); return } $('#trackerResult').innerHTML = '<div class="mini-card"><b>Order not found.</b><p style="color:#777;margin-top:5px;font-size:12px">Try CF-8942, CF-7710 or CF-5521.</p></div>'; showToast('Order not found.') } }
+    trackOrder();
+
+    // FAQ
+    $$('.faq-btn').forEach(btn => btn.addEventListener('click', () => { const item = btn.parentElement; const open = item.classList.toggle('open'); btn.querySelector('.faq-plus').textContent = open ? '−' : '+' }));
+    $('#faqSearch').addEventListener('input', e => { const q = e.target.value.toLowerCase(); $$('.faq-item').forEach(item => item.classList.toggle('hidden', !item.textContent.toLowerCase().includes(q))) });
+
+    // Funnel
+    function openFunnel() { $('#funnelModal').classList.add('open'); document.body.style.overflow = 'hidden'; nextFunnel(1) }
+    function closeFunnel() { $('#funnelModal').classList.remove('open'); if (!$('#videoModal').classList.contains('open')) document.body.style.overflow = '' }
+    function nextFunnel(step) { if (step === 2 && !$('#fUrl').value) { showToast('Please add your video URL first.'); return } if (step === 4 && !state.funnelStyle) { showToast('Choose an editing style first.'); return } for (let i = 1; i <= 4; i++) { const el = $('#fs' + i); if (el) el.classList.toggle('active', i === step); $('#pr' + i).classList.toggle('active', i === step) } $('#fSuccess').classList.remove('active') }
+    $$('.style-choice').forEach(btn => btn.addEventListener('click', () => { $$('.style-choice').forEach(x => x.classList.remove('active')); btn.classList.add('active'); state.funnelStyle = btn.dataset.style }));
+    async function submitFunnel() { const name = $('#fName').value.trim(), email = $('#fEmail').value.trim(), url = $('#fUrl').value.trim(); if (!name || !email || !url) { showToast('Please complete the required fields.'); return } if (!/^\S+@\S+\.\S+$/.test(email)) { showToast('Please enter a valid email address.'); return } const req = { name, email, phone: $('#fPhone').value.trim(), url, type: $('#fType').value, style: state.funnelStyle, goal: $('#fGoal').value, volume: $('#fVol').value }; let data = null; try { const r = await fetch('/api/leads', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(req) }); data = await r.json(); if (!r.ok) throw new Error(data.error || 'Request failed') } catch (e) { const localId = 'LEAD-LOCAL-' + Math.floor(100000 + Math.random() * 900000); const localOrder = 'CF-LOCAL-' + Math.floor(1000 + Math.random() * 9000); data = { ok: true, leadId: localId, orderId: localOrder, offline: true }; showToast('Saved locally — connect the backend to receive leads online.') } localStorage.setItem('clipForgeLastRequest', JSON.stringify({ ...req, ...data, createdAt: new Date().toISOString() })); for (let i = 1; i <= 4; i++)$('#pr' + i).classList.remove('active'); $$('.step-page').forEach(x => x.classList.remove('active')); $('#fSuccess').classList.add('active'); $('#successText').textContent = `Thanks ${name}. Your request is captured. Your Order ID is ${data.orderId}. Save it to track your project later.`; track('sample_funnel_submitted', { orderId: data.orderId, offline: !!data.offline }) }
+
+    // close modals on background click / escape
+    $$('.modal').forEach(m => m.addEventListener('click', e => { if (e.target === m) { m.classList.remove('open'); document.body.style.overflow = '' } }));
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') { closeVideoModal(); closeFunnel() } });
+
+    // analytics-ready event hooks
+    function track(name, payload = {}) { window.dataLayer = window.dataLayer || []; window.dataLayer.push({ event: name, ...payload }) }
+    $$('.btn').forEach(b => b.addEventListener('click', () => track('cta_clicked', { label: b.innerText.trim().slice(0, 40) })));
+  </script>
+</body>
+
+</html>
