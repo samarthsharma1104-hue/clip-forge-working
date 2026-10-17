@@ -2,7 +2,13 @@
 
 ## Run locally
 
-Requires Node.js 18+.
+Requires Node.js 18+ and PostgreSQL 14+.
+
+Add the database connection to a `.env` file before starting the server:
+
+```env
+DATABASE_URL=postgresql://postgres:password@localhost:5432/clip_forge
+```
 
 ```bash
 npm install
@@ -23,14 +29,14 @@ Then open:
 - Pricing currency and monthly/quarterly controls
 - Content Lab selector
 - Client dashboard filters
-- Order tracker using backend API, with local demo fallback
+- Order tracker using the backend API
 - 4-step free-sample lead funnel
 - Lead creation through `POST /api/leads`
 - Media upload API through `POST /api/uploads`
 - Health check through `GET /api/health`
 - Admin endpoints protected by `ADMIN_TOKEN`
-- Local fallback for the lead form when the backend/API is unavailable
+- Leads and orders stored in PostgreSQL
 
 ## Production note
 
-The site can run locally as provided. For public deployment, use a Node-capable host for the backend and replace the starter JSON storage with a database. Add a real email/CRM connection before relying on the lead form for business enquiries.
+The server creates the `leads` and `orders` tables and seeds the demo orders on the first run. For public deployment, use a Node-capable host with a managed PostgreSQL database. Add a real email/CRM connection before relying on the lead form for business enquiries.
